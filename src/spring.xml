@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <!-- Implicit or Autowiring of Bean Wiring in XML Configuration -->
+     
+    <!-- bean definitions here -->
+    <!-- Bean Wiring Types
+    	1. No-Autowiring Mode (explicit) wiring with setter injection- (Previuos example based on it)
+    	2. By Name (Implicit)-(Current Example)
+    	3. By Type
+    	4. By Constructor
+    	5. default
+     -->
+     
+     <!-- 2. By Name (Implicit)-(Current Example) -->
+	 <!-- <bean class="com.doj.spring.Car" id="car" autowire="byName"/> 	 -->
+
+	  <!-- 3. By Type (Implicit)-(Current Example) -->
+	<!--  <bean class="com.doj.spring.Car" id="car" autowire="byType"/> 	 -->
+	 
+	 <!-- 4. Constructor (Implicit)-(Current Example) -->
+	<!--  <bean class="com.doj.spring.Car" id="car" autowire="constructor"/>  -->
+	 
+	  <!-- 5. Autodetect or default (Implicit)-(Current Example) -->
+	 <bean class="com.doj.spring.Car" id="car" autowire="default"/> 	
+	 
+	 <!-- STEEL -->
+	<bean class="com.doj.spring.Body" id="body">
+		<property name="bodyType" value="STEEL"></property>    
+	</bean>
+	
+	<!-- FORD -->
+	<bean class="com.doj.spring.Engine" id="engine">
+	    <property name="engineName" value="FORD"></property>  
+	</bean>
+	
+	<!-- MRF -->	
+	<bean class="com.doj.spring.Tyre" id="tyre">
+	    <property name="tyreName" value="MRF"></property>  
+	</bean>	 
+</beans>
